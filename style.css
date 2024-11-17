@@ -1,0 +1,168 @@
+body, h1, h2, h3, p, ul, li, a, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff9800;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .reveal {
+    animation: reveal 1.5s ease-in-out;
+  }
+  
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-left {
+    animation: fade-left 1.5s ease-in-out;
+  }
+  
+  @keyframes fade-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-right {
+    animation: fade-right 1.5s ease-in-out;
+  }
+  
+  @keyframes fade-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .content img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .content p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  
+  footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  footer input, footer textarea, footer button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  footer button {
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    background: #e68a00;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }

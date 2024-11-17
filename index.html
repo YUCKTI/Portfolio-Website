@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">My Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#section1">Home</a></li>
+      <li><a href="#section2">About</a></li>
+      <li><a href="#section3">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <section id="section1" class="section reveal">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Showcasing my skills and projects </p>
+  </section>
+
+  
+  <section id="section2" class="section fade-left">
+    <h2>About Me</h2>
+    <p> My name is yuckti goyal from  UP .I am a passionate web developer skilled in creating responsive and visually appealing websites.'m constantly seeking opportunities for growth and learning. My hobbies are listening music and travelling I believe in the power of Innovation and Creativity and this philosophy shapes my approach to every project. I thrive in collaborati environments, cherishing the exchange of ideas and perspectives that lead to innovative solutions.</p>
+  </section>
+
+
+  <section id="section3" class="section fade-right">
+    <h2>My Projects</h2>
+    <div class="content">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-c9f-op_95Gpd-RwTeD_2h6iKiacS2J2_XfPaK95FUgk2iVJqWBy5EYm2oP_JDLzWwPY&usqp=CAU" alt="Project 1">
+      <p>A Zomato clone built using HTML and CSS focuses on creating a visually appealing static replica of the original website. It includes a header with the Zomato logo, navigation links, and a search bar, styled proper alignment and responsiveness.  The main section displays a grid of restaurant cards, showcasing images, names, ratings, cuisine types, and delivery details, with hover effects and shadow styling for a modern look. A footer is added with links to important pages like Privacy Policy and About Us, along with social media placeholders. The design uses Zomato’s signature color palette of red, white, and black it is static and lacks interactive or dynamic functionalities.</p>
+      <img src="https://camo.githubusercontent.com/dbb73215587add330993a147d8ee65f3411d06c7cede8c7983bf7571ec93a748/68747470733a2f2f692e6962622e636f2f70764350474e302f6c616e64696e672d706167652e6a7067" alt="Project 2">
+      <p>A BookMyShow clone using HTML and CSS focuses on replicating the visual layout and design of the ticket booking platform. It includes a header with the logo, navigation links, and a search bar for movies, events, or locations. The homepage features a hero section with banners or carousels showcasing popular movies, events, and offers. Below this, there is a grid layout displaying movie posters, titles, genres, and show timings, styled with hover effects to highlight selection</p>
+    </div>
+  </section>
+
+  
+  <footer id="contact">
+    <h3>Contact Me</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
